@@ -45,8 +45,8 @@ void loop()
   }
   
   // If someone is on the lower step (within 100cm)
-  if (lowerStepRangeInCentimeters < 100)
-    lowerStepTimeout = 3;
+  if (lowerStepRangeInCentimeters < 75)
+    lowerStepTimeout = 12;
   
   // If someone is walking down
   // Trigger upper sensor and lowerStepTimeout is cleared
@@ -76,7 +76,7 @@ void loop()
   
   if (lowerStepTimeout > 0) lowerStepTimeout--;
   
-  delay(1000);
+  delay(250);
 }
 
 
